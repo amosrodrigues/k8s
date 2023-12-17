@@ -14,10 +14,11 @@ spec:
     spec:
       containers:
         - name: nginx-container
-          image: nginx:1.16.1
+          image: nginx:1.14.2
 
   selector:
     matchLabels:
       env: production
-
-  replicas: 1
+  strategy:
+    type: Recreate
+  replicas: 5
