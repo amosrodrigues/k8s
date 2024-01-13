@@ -3,6 +3,7 @@ kind: Pod
 
 metadata:
   name: redis-pod
+  namespace: backend-ns #### definição do campo namespace =)
   labels:
     apps: backend
 
