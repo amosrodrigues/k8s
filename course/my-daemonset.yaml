@@ -1,7 +1,7 @@
 apiVersion: apps/v1
-kind: DaemontSet
+kind: DaemonSet
 metadata:
-  name: my-daemontset
+  name: my-daemonset
   labels:
     app: frontend
 
