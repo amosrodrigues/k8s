@@ -16,6 +16,9 @@ spec:
       containers:
         - name: my-container-nginx
           image: nginx
+      nodeName: kind-worker3
+ #     nodeSelector:
+ #       disktype: ssd  //aplicado por labels
 
   selector:
     matchLabels:
