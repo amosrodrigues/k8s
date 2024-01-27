@@ -21,4 +21,5 @@ spec:
       env: production
   strategy:
     type: Recreate
+#    type: RollingUpdate // default
   replicas: 5

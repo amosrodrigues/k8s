@@ -6,6 +6,11 @@ metadata:
     app: frontend
 
 spec:
+  updateStrategy:
+#    type: RollingUpdate
+    type: OnDelete
+#    rollingUpdate:
+#      maxUnavailable: 2
   template:
     metadata:
       name: my-pod-webserver
@@ -15,10 +20,10 @@ spec:
     spec:
       containers:
         - name: my-container-nginx
-          image: nginx
-      nodeName: kind-worker3
- #     nodeSelector:
- #       disktype: ssd  //aplicado por labels
+          image: tomcat
+#      nodeName: kind-worker3 // atibuição direta
+#     nodeSelector:
+#       disktype: ssd  //atribuição por labels
 
   selector:
     matchLabels:
