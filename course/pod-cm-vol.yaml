@@ -17,4 +17,4 @@ spec:
   volumes:
   - name: my-vol 
     configMap:
-      name: my-cm 
+      name: my-cm
