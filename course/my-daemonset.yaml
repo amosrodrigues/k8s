@@ -7,23 +7,23 @@ metadata:
 
 spec:
   updateStrategy:
-#    type: RollingUpdate
+    #    type: RollingUpdate
     type: OnDelete
-#    rollingUpdate:
-#      maxUnavailable: 2
+  #    rollingUpdate:
+  #      maxUnavailable: 2
   template:
     metadata:
       name: my-pod-webserver
-      labels: 
+      labels:
         apps: my-app
         tier: frontend
     spec:
       containers:
         - name: my-container-nginx
           image: tomcat
-#      nodeName: kind-worker3 // atibuição direta
-#     nodeSelector:
-#       disktype: ssd  //atribuição por labels
+  #      nodeName: kind-worker3 // atibuição direta
+  #     nodeSelector:
+  #       disktype: ssd  //atribuição por labels
 
   selector:
     matchLabels:
