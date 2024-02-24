@@ -16,9 +16,9 @@ spec:
         app: jupyter-pods
     spec:
       containers:
-      - name: jupyter-container
-        image: jupyter/minimal-notebook:2022-12-05
-        ports:
-        - containerPort: 8888
-        command: ["start-notebook.sh"]
-        args: ["--NotebookApp.token=''"]
+        - name: jupyter-container
+          image: jupyter/minimal-notebook:2022-12-05
+          ports:
+            - containerPort: 8888
+          command: ["start-notebook.sh"]
+          args: ["--NotebookApp.token=''"]
